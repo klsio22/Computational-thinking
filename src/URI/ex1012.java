@@ -7,11 +7,12 @@ public class ex1012 {
     public static void main(String[] args) throws IOException {
         Locale.setDefault(Locale.US);
         Scanner ent = new Scanner(System.in);
+        double A = 0 , B = 0 , C = 0;
+        double pi = 3.14159;
 
-        Double A = ent.nextDouble(),
-                B = ent.nextDouble() ,
-                C = ent.nextDouble() ,
-                pi = 3.14159;
+        A = ent.nextDouble();
+        B = ent.nextDouble() ;
+        C = ent.nextDouble() ;
 
         System.out.printf("TRIANGULO: %.3f\n" +
                 "CIRCULO: %.3f\n" +
