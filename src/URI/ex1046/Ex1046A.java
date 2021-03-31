@@ -53,10 +53,10 @@ class TempoDeJogo {
             x = 24 + (horaFinal - horaInicial);
         }
 
-        if (horaInicial == horaFinal) {
+        if (horaInicial == horaFinal)
             return ("O JOGO DUROU 24 HORA(S)\n");
-        } else
-            return ("O JOGO DUROU " + x + " HORA(S)\n");
+
+        return ("O JOGO DUROU " + x + " HORA(S)\n");
     }
 }
 

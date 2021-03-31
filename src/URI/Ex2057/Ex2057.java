@@ -13,34 +13,29 @@ public class Ex2057 {
 
 class InterfaceTexto {
     private final Scanner entrada;
-    private final FusoHorario fuso;
 
     public InterfaceTexto() {
         entrada = new Scanner(System.in);
-        fuso = new FusoHorario();
     }
 
     public void EntradaDados() {
-        fuso.setS(entrada.nextInt());
-        fuso.setT(entrada.nextInt());
-        fuso.setF(entrada.nextInt());
+        int S = entrada.nextInt();
+        int T = entrada.nextInt();
+        int F = entrada.nextInt();
+        FusoHorario fuso = new FusoHorario(S, T, F);
         System.out.printf("%d\n", fuso.getFusoHorario());
     }
 }
 
 class FusoHorario {
-    private int S, T, F;
+    private final int S;
+    private final int T;
+    private final int F;
 
-    public void setS(int S) {
+    public FusoHorario(int S, int T, int F){
         this.S = S;
-    }
-
-    public void setT(int T) {
-        this.T = T;
-    }
-
-    public void setF(int F) {
         this.F = F;
+        this.T = T;
     }
 
     public int getFusoHorario() {
@@ -48,15 +43,13 @@ class FusoHorario {
 
         soma = S + T + F;
 
-        if (soma == 24) {
+        if (soma == 24)
             return 0;
-        } else if (soma > 24) {
+        if (soma > 24)
             return soma - 24;
-        } else if (soma < 0) {
+        if (soma < 0)
             return 24 + (soma);
-        } else
-            return soma;
 
+        return soma;
     }
-
 }
