@@ -36,7 +36,6 @@ class ChequesPorExtenso {
 
     public String getValorEntre100000E900000() {
         int resto = valor % 100000 / 10;
-        int casaMilhar = valor / 1000 % 10;
         int centenaMilhar = valor / 100000;
         String nomecentenaMilhar = "";
 
@@ -113,7 +112,7 @@ class ChequesPorExtenso {
         int dezenaMilharUni = valor / 1000;
         String nomeDezenaMilhar = "";
 
-        if (resto == 0 && valor < 100000)
+        if (resto != 0 && valor < 100000)
             switch (dezenaMilhar) {
                 case 1:
                     switch (dezenaMilharUni) {
@@ -233,7 +232,7 @@ class ChequesPorExtenso {
                     nomeDezenaMilhar = "e noventa mil";
             }
 
-        if (resto != 0)
+        if (resto != 0 && valor > 20000)
             switch (dezenaMilhar) {
                 case 1:
                     switch (dezenaMilharUni) {
@@ -649,31 +648,11 @@ class ChequesPorExtenso {
         if (valor <= 0 || valor > 1000000)
             return nomePorExteso = "";
 
-        if (getValorEntre1E09().equals(""))
-            nomePorExteso = String.format("%s %s %s reais.--", getValorEntre1000E9000(),
-                    getValorEntre100E900(), getValorEntre10E90());
-
-        if (getValorEntre10E90().equals(""))
-            nomePorExteso = String.format("%s %s %s reais.++", getValorEntre1000E9000(),
-                    getValorEntre100E900(), getValorEntre1E09());
-
-        if (getValorEntre100E900().equals(""))
-            nomePorExteso = String.format("%s %s %s reais.+/*", getValorEntre1000E9000(),
-                    getValorEntre10E90(), getValorEntre1E09());
-
-        if (getValorEntre10E90().equals("") && getValorEntre1E09().equals(""))
-            nomePorExteso = String.format("%s %s reais./", getValorEntre1000E9000(), getValorEntre100E900());
-
-        if (getValorEntre100E900().equals("") && getValorEntre1E09().equals(""))
-            nomePorExteso = String.format("%s %s reais.-", getValorEntre1000E9000(), getValorEntre10E90());
-
-        if (getValorEntre10E90().equals("") && getValorEntre100E900().equals(""))
-            nomePorExteso = String.format("%s %s reais.++", getValorEntre1000E9000(), getValorEntre1E09());
-
 
         nomePorExteso = String.format("%s %s %s %s %s %s reais", getValorEntre100000E900000()
                 , getValorEntre10000E90000(), getValorEntre1000E9000(), getValorEntre100E900()
                 , getValorEntre10E90(), getValorEntre1E09());
+
 
         return nomePorExteso.trim().toLowerCase(Locale.ROOT);
     }
