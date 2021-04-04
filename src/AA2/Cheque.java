@@ -34,39 +34,240 @@ class ChequesPorExtenso {
             this.valor = valor;
     }
 
+    public String getValorEntre100000E900000() {
+        int resto = valor % 100000 / 10;
+        int centenaMilhar = valor / 100000;
+        String nomecentenaMilhar = "";
+
+        if ( resto == 0)
+            switch (centenaMilhar) {
+            case 1:
+                nomecentenaMilhar = "cem mil";
+                break;
+            case 2:
+                nomecentenaMilhar = "dozentos mil";
+                break;
+            case 3:
+                nomecentenaMilhar = "trezentos mil";
+                break;
+            case 4:
+                nomecentenaMilhar = "quadrocentos mil";
+                break;
+            case 5:
+                nomecentenaMilhar = "quinhetos mil";
+                break;
+            case 6:
+                nomecentenaMilhar = "seiscentos mil";
+                break;
+            case 7:
+                nomecentenaMilhar = "setecentos mil";
+                break;
+            case 8:
+                nomecentenaMilhar = "oitocentos mil";
+                break;
+            case 9:
+                nomecentenaMilhar = "novecentos mil";
+                break;
+        }
+
+        return nomecentenaMilhar;
+
+    }
+
+    public String getValorEntre10000E90000() {
+        int resto = valor % 10000 / 10;
+        int dezenaMilhar = valor / 10000 % 10;
+        int dezenaMilharUni = valor / 1000;
+        String nomeDezenaMilhar = "";
+
+        if (resto == 0)
+            switch (dezenaMilhar) {
+                case 1:
+                    switch (dezenaMilharUni) {
+                        case 0:
+                            nomeDezenaMilhar = "dez mil";
+                            break;
+                        case 1:
+                            nomeDezenaMilhar = "onze mil";
+                            break;
+                        case 2:
+                            nomeDezenaMilhar = "doze mil";
+                            break;
+                        case 3:
+                            nomeDezenaMilhar = "treze mil";
+                            break;
+                        case 4:
+                            nomeDezenaMilhar = "quartorze mil";
+                            break;
+                        case 5:
+                            nomeDezenaMilhar = "quinze mil";
+                            break;
+                        case 6:
+                            nomeDezenaMilhar = "dezeseis mil";
+                            break;
+                        case 7:
+                            nomeDezenaMilhar = "dezessete mil";
+                            break;
+                        case 8:
+                            nomeDezenaMilhar = "dezoito mil";
+                            break;
+                        case 9:
+                            nomeDezenaMilhar = "dezenove mil";
+                    }
+                    break;
+                case 2:
+                    nomeDezenaMilhar = "vinte mil";
+                    break;
+                case 3:
+                    nomeDezenaMilhar = "trinta mil";
+                    break;
+                case 4:
+                    nomeDezenaMilhar = "quarenta mil";
+                    break;
+                case 5:
+                    nomeDezenaMilhar = "cinquenta mil";
+                    break;
+                case 6:
+                    nomeDezenaMilhar = "sessenta mil";
+                    break;
+                case 7:
+                    nomeDezenaMilhar = "setenta mil";
+                    break;
+                case 8:
+                    nomeDezenaMilhar = "oitenta mil";
+                    break;
+                case 9:
+                    nomeDezenaMilhar = "noventa mil";
+            }
+        if (resto != 0)
+            switch (dezenaMilhar) {
+                case 1:
+                    switch (dezenaMilharUni) {
+                        case 0:
+                            nomeDezenaMilhar = "dez mil";
+                            break;
+                        case 11:
+                            nomeDezenaMilhar = "onze mil";
+                            break;
+                        case 12:
+                            nomeDezenaMilhar = "doze mil";
+                            break;
+                        case 13:
+                            nomeDezenaMilhar = "treze mil";
+                            break;
+                        case 14:
+                            nomeDezenaMilhar = "quartorze mil";
+                            break;
+                        case 15:
+                            nomeDezenaMilhar = "quinze mil";
+                            break;
+                        case 16:
+                            nomeDezenaMilhar = "dezeseis mil";
+                            break;
+                        case 17:
+                            nomeDezenaMilhar = "dezessete mil";
+                            break;
+                        case 18:
+                            nomeDezenaMilhar = "dezoito mil";
+                            break;
+                        case 19:
+                            nomeDezenaMilhar = "dezenove mil";
+                    }
+                    break;
+                case 2:
+                    nomeDezenaMilhar = "vinte";
+                    break;
+                case 3:
+                    nomeDezenaMilhar = "trinta";
+                    break;
+                case 4:
+                    nomeDezenaMilhar = "quarenta";
+                    break;
+                case 5:
+                    nomeDezenaMilhar = "cinquenta";
+                    break;
+                case 6:
+                    nomeDezenaMilhar = "sessenta";
+                    break;
+                case 7:
+                    nomeDezenaMilhar = "setenta";
+                    break;
+                case 8:
+                    nomeDezenaMilhar = "oitenta";
+                    break;
+                case 9:
+                    nomeDezenaMilhar = "noventa";
+            }
+
+        return nomeDezenaMilhar;
+    }
+
     public String getValorEntre1000E9000() {
-        int milhar = valor / 1000;
+        int milhar = valor / 1000 % 10;
+
         String nomeMilhar = "";
+
+        if (valor < 10000)
+            switch (milhar) {
+                case 1:
+                    nomeMilhar = "mil";
+                    break;
+                case 2:
+                    nomeMilhar = "dois mil";
+                    break;
+                case 3:
+                    nomeMilhar = "três mil";
+                    break;
+                case 4:
+                    nomeMilhar = "quadro mil";
+                    break;
+                case 5:
+                    nomeMilhar = "cinco mil";
+                    break;
+                case 6:
+                    nomeMilhar = "seis mil";
+                    break;
+                case 7:
+                    nomeMilhar = "sete mil";
+                    break;
+                case 8:
+                    nomeMilhar = "oito mil";
+                    break;
+                case 9:
+                    nomeMilhar = "nove mil";
+                    break;
+            }
 
         switch (milhar) {
             case 1:
-                nomeMilhar = "mil";
+                nomeMilhar = "e um mil";
                 break;
             case 2:
-                nomeMilhar = "dois mil";
+                nomeMilhar = "e dois mil";
                 break;
             case 3:
-                nomeMilhar = "três mil";
+                nomeMilhar = "e três mil";
                 break;
             case 4:
-                nomeMilhar = "quadro mil";
+                nomeMilhar = "e quadro mil";
                 break;
             case 5:
-                nomeMilhar = "cindo mil";
+                nomeMilhar = "e cinco mil";
                 break;
             case 6:
-                nomeMilhar = "seis mil";
+                nomeMilhar = "e seis mil";
                 break;
             case 7:
-                nomeMilhar = "sete mil";
+                nomeMilhar = "e sete mil";
                 break;
             case 8:
-                nomeMilhar = "oito mil";
+                nomeMilhar = "e oito mil";
                 break;
             case 9:
-                nomeMilhar = "nove mil";
+                nomeMilhar = "e nove mil";
                 break;
         }
+
         return nomeMilhar;
     }
 
@@ -89,7 +290,7 @@ class ChequesPorExtenso {
                     nomeCentena = "trezentos";
                     break;
                 case 4:
-                    nomeCentena = "quadroCentos";
+                    nomeCentena = "quatrocentos";
                     break;
                 case 5:
                     nomeCentena = "quinhentos";
@@ -123,7 +324,7 @@ class ChequesPorExtenso {
                     nomeCentena = "e trezentos";
                     break;
                 case 4:
-                    nomeCentena = "e quadroCentos";
+                    nomeCentena = "e quatrocentos";
                     break;
                 case 5:
                     nomeCentena = "e quinhentos";
@@ -141,6 +342,7 @@ class ChequesPorExtenso {
                     nomeCentena = "e novecentos";
                     break;
             }
+
         return nomeCentena;
     }
 
@@ -182,7 +384,6 @@ class ChequesPorExtenso {
                             break;
                         case 9:
                             nomeDaDezena = "dezenove";
-                            break;
                     }
                     break;
                 case 2:
@@ -195,7 +396,7 @@ class ChequesPorExtenso {
                     nomeDaDezena = "quarenta";
                     break;
                 case 5:
-                    nomeDaDezena = "ciquenta";
+                    nomeDaDezena = "cinquenta";
                     break;
                 case 6:
                     nomeDaDezena = "sessenta";
@@ -208,7 +409,6 @@ class ChequesPorExtenso {
                     break;
                 case 9:
                     nomeDaDezena = "noventa";
-                    break;
 
             }
 
@@ -245,7 +445,6 @@ class ChequesPorExtenso {
                             break;
                         case 9:
                             nomeDaDezena = "e dezenove";
-                            break;
                     }
                     break;
                 case 2:
@@ -258,7 +457,7 @@ class ChequesPorExtenso {
                     nomeDaDezena = "e quarenta";
                     break;
                 case 5:
-                    nomeDaDezena = "e ciquenta";
+                    nomeDaDezena = "e cinquenta";
                     break;
                 case 6:
                     nomeDaDezena = "e sessenta";
@@ -271,13 +470,12 @@ class ChequesPorExtenso {
                     break;
                 case 9:
                     nomeDaDezena = "e noventa";
-                    break;
             }
 
         return nomeDaDezena.trim();
     }
 
-    public String getValorEntre1E10() {
+    public String getValorEntre1E09() {
 
         int unidade = valor % 100;
 
@@ -311,7 +509,7 @@ class ChequesPorExtenso {
                     break;
                 case 9:
                     nomeUnidade = "nove";
-                    break;
+
             }
 
         if (valor > 20 && unidade > 20)
@@ -355,30 +553,31 @@ class ChequesPorExtenso {
         if (valor <= 0 || valor > 1000000)
             return nomePorExteso = "";
 
-        if (getValorEntre1E10().equals(""))
+        if (getValorEntre1E09().equals(""))
             nomePorExteso = String.format("%s %s %s reais.--", getValorEntre1000E9000(),
                     getValorEntre100E900(), getValorEntre10E90());
 
         if (getValorEntre10E90().equals(""))
             nomePorExteso = String.format("%s %s %s reais.++", getValorEntre1000E9000(),
-                    getValorEntre100E900(), getValorEntre1E10());
+                    getValorEntre100E900(), getValorEntre1E09());
 
         if (getValorEntre100E900().equals(""))
             nomePorExteso = String.format("%s %s %s reais.+/*", getValorEntre1000E9000(),
-                    getValorEntre10E90(), getValorEntre1E10());
+                    getValorEntre10E90(), getValorEntre1E09());
 
-        if (getValorEntre10E90().equals("") && getValorEntre1E10().equals(""))
+        if (getValorEntre10E90().equals("") && getValorEntre1E09().equals(""))
             nomePorExteso = String.format("%s %s reais./", getValorEntre1000E9000(), getValorEntre100E900());
 
-        if (getValorEntre100E900().equals("") && getValorEntre1E10().equals(""))
+        if (getValorEntre100E900().equals("") && getValorEntre1E09().equals(""))
             nomePorExteso = String.format("%s %s reais.-", getValorEntre1000E9000(), getValorEntre10E90());
 
         if (getValorEntre10E90().equals("") && getValorEntre100E900().equals(""))
-            nomePorExteso = String.format("%s %s reais.++", getValorEntre1000E9000(), getValorEntre1E10());
+            nomePorExteso = String.format("%s %s reais.++", getValorEntre1000E9000(), getValorEntre1E09());
 
-        if (!getValorEntre1E10().equals(""))
-            nomePorExteso = String.format("%s %s %s %s reais(al).*", getValorEntre1000E9000(), getValorEntre100E900()
-                    , getValorEntre10E90(), getValorEntre1E10());
+
+        nomePorExteso = String.format("%s %s %s %s %s %s reais.*", getValorEntre100000E900000()
+                , getValorEntre10000E90000(), getValorEntre1000E9000(), getValorEntre100E900()
+                , getValorEntre10E90(), getValorEntre1E09());
 
         return nomePorExteso.trim().toLowerCase(Locale.ROOT);
     }
