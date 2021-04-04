@@ -1,11 +1,10 @@
-package URI.ex1045;
-//KLESIO ANTONIO DO NASCIMENTO
+package URI.Ex1045b;
 
+import java.io.IOException;
 import java.util.Locale;
 import java.util.Scanner;
-import java.io.IOException;
 
-public class ex1045 {
+public class Ex1045b {
     public static void main(String[] args) throws IOException {
         Locale.setDefault(Locale.US);
         InterfaceTexto2 obj = new InterfaceTexto2();
@@ -14,8 +13,8 @@ public class ex1045 {
 }
 
 class InterfaceTexto2 {
-    private  Scanner entrada;
-    private  TiposDeTriangulos triangulos;
+    private final Scanner entrada;
+    private final TiposDeTriangulos triangulos;
 
     public InterfaceTexto2() {
         entrada = new Scanner(System.in);
@@ -26,7 +25,7 @@ class InterfaceTexto2 {
         triangulos.setA(entrada.nextDouble());
         triangulos.setB(entrada.nextDouble());
         triangulos.setC(entrada.nextDouble());
-        System.out.print(triangulos.getTiposDeTriagulos());
+        System.out.println(triangulos.getTiposDeTriagulos());
     }
 
 }
@@ -69,40 +68,33 @@ class TiposDeTriangulos {
 
         if (A + B > C && B + C > A && C + A > B) {
 
-            if (ladoA * ladoA > ((ladoB * ladoB) + (ladoC * ladoC))) {
+            if (ladoA * ladoA > ((ladoB * ladoB) + (ladoC * ladoC)))
                 // se ladoA > temB + ladoC
-                sout("TRIANGULO OBTUSANGULO\n");
-            }
+                return ("TRIANGULO OBTUSANGULO\n");
 
-            if (ladoA * ladoA == ((ladoB * ladoB) + (ladoC * ladoC))) {
+
+            if (ladoA * ladoA == ((ladoB * ladoB) + (ladoC * ladoC)))
                 // se ladoA = temB + ladoC
-                sout("TRIANGULO RETANGULO\n");
-            }
+                return ("TRIANGULO RETANGULO\n");
 
-            if (ladoA * ladoA < ((ladoB * ladoB) + (ladoC * ladoC))) {
+
+            if (ladoA * ladoA < ((ladoB * ladoB) + (ladoC * ladoC)))
                 //se ladoA < temB + ladoC
-                sout("TRIANGULO ACUTANGULO\n");
-            }
+                return ("TRIANGULO ACUTANGULO\n");
 
-            if ((ladoA == ladoB) && (ladoA == ladoC)) {
+
+            if ((ladoA == ladoB) && (ladoA == ladoC))
                 // se os três lados forem iguais, TRIANGULO EQUILATERO
-                sout("TRIANGULO EQUILATERO\n");
-            }
+                return ("TRIANGULO EQUILATERO\n");
+
 
             if (((ladoA == ladoB) && (ladoA != ladoC))
                     || ((ladoA == ladoC) && (ladoA != ladoB))
-                    || ((ladoB == ladoC) && (ladoB != ladoA))) {
-                sout("TRIANGULO ISOSCELES\n");
-            }
+                    || ((ladoB == ladoC) && (ladoB != ladoA)))
+                return ("TRIANGULO ISOSCELES\n");
 
-        } else
-            sout("NAO FORMA TRIANGULO\n");
+        }
 
-        return "";
+        return ("NAO FORMA TRIANGULO\n");
     }
-
-    private void sout(String s) {
-        System.out.print(s);
-    }
-
 }
