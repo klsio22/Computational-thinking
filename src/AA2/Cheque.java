@@ -1,4 +1,5 @@
 package AA2;
+
 import java.util.Locale;
 //Klesio Antonio do Nascimento
 
@@ -83,7 +84,7 @@ public class Cheque {
 
     public String getValorEntre10000E90000() {
         int resto = valor % 10000 / 10;
-        int menosResto = (valor - (valor % 10000))/100000;
+        int menosResto = (valor - (valor % 10000)) / 100000;
         int dezenaMilhar = valor / 10000 % 10;
         int dezenaMilharUni = valor / 1000;
         String nomeDezenaMilhar = "";
@@ -244,7 +245,7 @@ public class Cheque {
             switch (dezenaMilhar) {
                 case 1:
                     switch (dezenaMilharUni) {
-                        case 0:
+                        case 10:
                             nomeDezenaMilhar = "dez mil";
                             break;
                         case 11:
@@ -276,35 +277,35 @@ public class Cheque {
                     }
                     break;
                 case 2:
-                    nomeDezenaMilhar = "vinte";
+                    nomeDezenaMilhar = "vinte mil";
                     break;
                 case 3:
-                    nomeDezenaMilhar = "trinta";
+                    nomeDezenaMilhar = "trinta mil";
                     break;
                 case 4:
-                    nomeDezenaMilhar = "quarenta";
+                    nomeDezenaMilhar = "quarenta mil";
                     break;
                 case 5:
-                    nomeDezenaMilhar = "cinquenta";
+                    nomeDezenaMilhar = "cinquenta mil";
                     break;
                 case 6:
-                    nomeDezenaMilhar = "sessenta";
+                    nomeDezenaMilhar = "sessenta mil";
                     break;
                 case 7:
-                    nomeDezenaMilhar = "setenta";
+                    nomeDezenaMilhar = "setenta mil";
                     break;
                 case 8:
-                    nomeDezenaMilhar = "oitenta";
+                    nomeDezenaMilhar = "oitenta mil";
                     break;
                 case 9:
-                    nomeDezenaMilhar = "noventa";
+                    nomeDezenaMilhar = "noventa mil";
             }
 
         if (resto != 0 && menosResto == 0 && valor < 100000)
             switch (dezenaMilhar) {
                 case 1:
                     switch (dezenaMilharUni) {
-                        case 0:
+                        case 10:
                             nomeDezenaMilhar = "dez mil";
                             break;
                         case 11:
@@ -430,7 +431,7 @@ public class Cheque {
                     break;
             }
 
-        if (valor > 100000 && valor < 110000 || valor > 120000){
+        if (valor > 100000 && valor < 110000 || valor > 120000) {
             switch (milhar) {
                 case 1:
                     nomeMilhar = "e um mil";
@@ -707,8 +708,11 @@ public class Cheque {
             }
         }
 
-        if (valor > 20 && unidade > 20) {
-            unidade = unidade % 10;
+        if (valor > 20) {
+            if (unidade > 10 && unidade < 20) {
+                nomeUnidade = "";
+            } else
+                unidade = unidade % 10;
             switch (unidade) {
                 case 1:
                     nomeUnidade = "e um";
@@ -757,7 +761,7 @@ public class Cheque {
 
         nomePorExteso = String.format("%s %s %s %s %s %s %s", getValorEntre100000E900000()
                 , getValorEntre10000E90000(), getValorEntre1000E9000(), getValorEntre100E900()
-                , getValorEntre10E90(), getValorEntre1E09(),singularPlural);
+                , getValorEntre10E90(), getValorEntre1E09(), singularPlural);
 
         return nomePorExteso.trim().toLowerCase(Locale.ROOT);
     }
