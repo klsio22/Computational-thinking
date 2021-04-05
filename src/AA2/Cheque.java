@@ -175,38 +175,39 @@ class ChequesPorExtenso {
 
         if (resto != 0 && valor > 100000) {
 
+            dezenaMilharUni = valor / 1000 % 10 % 10;
             switch (dezenaMilhar) {
                 case 1:
                     switch (dezenaMilharUni) {
                         case 0:
-                            nomeDezenaMilhar = "dez mil";
+                            nomeDezenaMilhar = "e dez mil";
                             break;
                         case 1:
-                            nomeDezenaMilhar = "onze mil";
+                            nomeDezenaMilhar = "e onze mil";
                             break;
                         case 2:
-                            nomeDezenaMilhar = "doze mil";
+                            nomeDezenaMilhar = "e doze mil";
                             break;
                         case 3:
-                            nomeDezenaMilhar = "treze mil";
+                            nomeDezenaMilhar = "e treze mil";
                             break;
                         case 4:
-                            nomeDezenaMilhar = "quartorze mil";
+                            nomeDezenaMilhar = "e quartorze mil";
                             break;
                         case 5:
-                            nomeDezenaMilhar = "quinze mil";
+                            nomeDezenaMilhar = "e quinze mil";
                             break;
-                        case 16:
-                            nomeDezenaMilhar = "dezeseis mil";
+                        case 6:
+                            nomeDezenaMilhar = "e dezeseis mil";
                             break;
-                        case 17:
-                            nomeDezenaMilhar = "dezessete mil";
+                        case 7:
+                            nomeDezenaMilhar = "e dezessete mil";
                             break;
-                        case 18:
-                            nomeDezenaMilhar = "dezoito mil";
+                        case 8:
+                            nomeDezenaMilhar = "e dezoito mil";
                             break;
-                        case 19:
-                            nomeDezenaMilhar = "dezenove mil";
+                        case 9:
+                            nomeDezenaMilhar = "e dezenove mil";
                     }
                     break;
                 case 2:
@@ -237,39 +238,6 @@ class ChequesPorExtenso {
 
         if (resto == 0 && valor > 100000) {
             switch (dezenaMilhar) {
-                case 1:
-                    switch (dezenaMilharUni) {
-                        case 10:
-                            nomeDezenaMilhar = "dez mil";
-                            break;
-                        case 1:
-                            nomeDezenaMilhar = "onze mil";
-                            break;
-                        case 2:
-                            nomeDezenaMilhar = "doze mil";
-                            break;
-                        case 3:
-                            nomeDezenaMilhar = "treze mil";
-                            break;
-                        case 4:
-                            nomeDezenaMilhar = "quartorze mil";
-                            break;
-                        case 15:
-                            nomeDezenaMilhar = "quinze mil";
-                            break;
-                        case 6:
-                            nomeDezenaMilhar = "dezeseis mil";
-                            break;
-                        case 7:
-                            nomeDezenaMilhar = "dezessete mil";
-                            break;
-                        case 8:
-                            nomeDezenaMilhar = "dezoito mil";
-                            break;
-                        case 9:
-                            nomeDezenaMilhar = "dezenove mil";
-                    }
-                    break;
                 case 2:
                     nomeDezenaMilhar = "e vinte mil";
                     break;
