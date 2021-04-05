@@ -23,6 +23,30 @@ class TesteCheque {
                 cheque.getValorPorExtenso());
     }
 
+    @Test
+    public void teste1()
+    {
+        cheque.setValor(1);
+        assertEquals("um real",
+                cheque.getValorPorExtenso());
+    }
+
+
+    @Test
+    public void teste10()
+    {
+        cheque.setValor(10);
+        assertEquals("dez  reais",
+                cheque.getValorPorExtenso());
+    }
+
+    @Test
+    public void teste15()
+    {
+        cheque.setValor(15);
+        assertEquals("quinze  reais",
+                cheque.getValorPorExtenso());
+    }
 
 }
 

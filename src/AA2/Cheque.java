@@ -2,7 +2,7 @@ package AA2;
 import java.util.Locale;
 //Klesio Antonio do Nascimento
 
-class Cheque {
+public class Cheque {
     private int valor;
 
     public void setValor(int valor) {
@@ -442,7 +442,7 @@ class Cheque {
                     nomeMilhar = "e três mil";
                     break;
                 case 4:
-                    nomeMilhar = "e quadro mil";
+                    nomeMilhar = "e quatro mil";
                     break;
                 case 5:
                     nomeMilhar = "e cinco mil";
