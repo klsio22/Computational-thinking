@@ -1,32 +1,8 @@
 package AA2;
-
-import java.io.IOException;
 import java.util.Locale;
-import java.util.Scanner;
 //Klesio Antonio do Nascimento
-public class Cheque {
-    public static void main(String[] args) throws IOException {
-        InterfaceTexto obj = new InterfaceTexto();
-        obj.EntradaDados();
-    }
-}
 
-class InterfaceTexto {
-    private final Scanner entrada;
-    private final ChequesPorExtenso cheque;
-
-    public InterfaceTexto() {
-        entrada = new Scanner(System.in);
-        cheque = new ChequesPorExtenso();
-    }
-
-    public void EntradaDados() {
-        cheque.setValor(entrada.nextInt());
-        System.out.printf("%s", cheque.getValorPorExtenso());
-    }
-}
-
-class ChequesPorExtenso {
+class Cheque {
     private int valor;
 
     public void setValor(int valor) {
@@ -324,7 +300,7 @@ class ChequesPorExtenso {
                     nomeDezenaMilhar = "noventa";
             }
 
-        if (resto != 0 && menosResto == 0 && valor < 100000){
+        if (resto != 0 && menosResto == 0 && valor < 100000)
             switch (dezenaMilhar) {
                 case 1:
                     switch (dezenaMilharUni) {
@@ -383,7 +359,6 @@ class ChequesPorExtenso {
                 case 9:
                     nomeDezenaMilhar = "noventa";
             }
-        }
 
         return nomeDezenaMilhar;
     }
@@ -436,7 +411,7 @@ class ChequesPorExtenso {
                     nomeMilhar = "e três mil";
                     break;
                 case 4:
-                    nomeMilhar = "e quadro mil";
+                    nomeMilhar = "e quatro mil";
                     break;
                 case 5:
                     nomeMilhar = "e cinco mil";

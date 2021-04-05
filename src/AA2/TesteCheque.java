@@ -2,7 +2,7 @@ package AA2;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-  /*
+
 class TesteCheque {
 
     private Cheque cheque = new Cheque();
@@ -22,5 +22,7 @@ class TesteCheque {
         assertEquals("seiscentos e cinquenta e quatro mil e trezentos e vinte e um reais",
                 cheque.getValorPorExtenso());
     }
+
+
 }
-*/
+
