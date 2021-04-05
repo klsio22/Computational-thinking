@@ -3,7 +3,7 @@ package AA2;
 import java.io.IOException;
 import java.util.Locale;
 import java.util.Scanner;
-
+//Klesio Antonio do Nascimento
 public class Cheque {
     public static void main(String[] args) throws IOException {
         InterfaceTexto obj = new InterfaceTexto();
@@ -107,6 +107,7 @@ class ChequesPorExtenso {
 
     public String getValorEntre10000E90000() {
         int resto = valor % 10000 / 10;
+        int menosResto = (valor - (valor % 10000))/100000;
         int dezenaMilhar = valor / 10000 % 10;
         int dezenaMilharUni = valor / 1000;
         String nomeDezenaMilhar = "";
@@ -207,28 +208,89 @@ class ChequesPorExtenso {
                     }
                     break;
                 case 2:
-                    nomeDezenaMilhar = "vinte";
+                    nomeDezenaMilhar = "e vinte";
                     break;
                 case 3:
-                    nomeDezenaMilhar = "trinta";
+                    nomeDezenaMilhar = "e trinta";
                     break;
                 case 4:
-                    nomeDezenaMilhar = "quarenta";
+                    nomeDezenaMilhar = "e quarenta";
                     break;
                 case 5:
-                    nomeDezenaMilhar = "cinquenta";
+                    nomeDezenaMilhar = "e cinquenta";
                     break;
                 case 6:
-                    nomeDezenaMilhar = "sessenta";
+                    nomeDezenaMilhar = "e sessenta";
                     break;
                 case 7:
-                    nomeDezenaMilhar = "setenta";
+                    nomeDezenaMilhar = "e setenta";
                     break;
                 case 8:
-                    nomeDezenaMilhar = "oitenta";
+                    nomeDezenaMilhar = "e oitenta";
                     break;
                 case 9:
-                    nomeDezenaMilhar = "noventa";
+                    nomeDezenaMilhar = "e noventa";
+            }
+
+        if (resto == 0 && valor > 100000)
+            dezenaMilharUni = valor / 10000;
+            switch (dezenaMilhar) {
+                case 1:
+                    switch (dezenaMilharUni) {
+                        case 0:
+                            nomeDezenaMilhar = "dez mil";
+                            break;
+                        case 11:
+                            nomeDezenaMilhar = "onze mil";
+                            break;
+                        case 12:
+                            nomeDezenaMilhar = "doze mil";
+                            break;
+                        case 13:
+                            nomeDezenaMilhar = "treze mil";
+                            break;
+                        case 14:
+                            nomeDezenaMilhar = "quartorze mil";
+                            break;
+                        case 15:
+                            nomeDezenaMilhar = "quinze mil";
+                            break;
+                        case 16:
+                            nomeDezenaMilhar = "dezeseis mil";
+                            break;
+                        case 17:
+                            nomeDezenaMilhar = "dezessete mil";
+                            break;
+                        case 18:
+                            nomeDezenaMilhar = "dezoito mil";
+                            break;
+                        case 19:
+                            nomeDezenaMilhar = "dezenove mil";
+                    }
+                    break;
+                case 2:
+                    nomeDezenaMilhar = "e vinte mil";
+                    break;
+                case 3:
+                    nomeDezenaMilhar = "e trinta mil";
+                    break;
+                case 4:
+                    nomeDezenaMilhar = "e quarenta mil";
+                    break;
+                case 5:
+                    nomeDezenaMilhar = "e cinquenta mil";
+                    break;
+                case 6:
+                    nomeDezenaMilhar = "e sessenta mil";
+                    break;
+                case 7:
+                    nomeDezenaMilhar = "e setenta mil";
+                    break;
+                case 8:
+                    nomeDezenaMilhar = "e oitenta mil";
+                    break;
+                case 9:
+                    nomeDezenaMilhar = "e noventa mil";
             }
 
         if (resto != 0 && valor < 100000)
@@ -267,29 +329,90 @@ class ChequesPorExtenso {
                     }
                     break;
                 case 2:
-                    nomeDezenaMilhar = "vinte mil ";
+                    nomeDezenaMilhar = "vinte";
                     break;
                 case 3:
-                    nomeDezenaMilhar = "trinta mil";
+                    nomeDezenaMilhar = "trinta";
                     break;
                 case 4:
-                    nomeDezenaMilhar = "quarenta mil";
+                    nomeDezenaMilhar = "quarenta";
                     break;
                 case 5:
-                    nomeDezenaMilhar = "cinquenta mil";
+                    nomeDezenaMilhar = "cinquenta";
                     break;
                 case 6:
-                    nomeDezenaMilhar = "sessenta mil";
+                    nomeDezenaMilhar = "sessenta";
                     break;
                 case 7:
-                    nomeDezenaMilhar = "setenta mil";
+                    nomeDezenaMilhar = "setenta";
                     break;
                 case 8:
-                    nomeDezenaMilhar = "oitenta mil";
+                    nomeDezenaMilhar = "oitenta";
                     break;
                 case 9:
-                    nomeDezenaMilhar = "noventa mil";
+                    nomeDezenaMilhar = "noventa";
             }
+
+        if (resto != 0 && menosResto == 0 && valor < 100000){
+            switch (dezenaMilhar) {
+                case 1:
+                    switch (dezenaMilharUni) {
+                        case 0:
+                            nomeDezenaMilhar = "dez mil";
+                            break;
+                        case 11:
+                            nomeDezenaMilhar = "onze mil";
+                            break;
+                        case 12:
+                            nomeDezenaMilhar = "doze mil";
+                            break;
+                        case 13:
+                            nomeDezenaMilhar = "treze mil";
+                            break;
+                        case 14:
+                            nomeDezenaMilhar = "quartorze mil";
+                            break;
+                        case 15:
+                            nomeDezenaMilhar = "quinze mil";
+                            break;
+                        case 16:
+                            nomeDezenaMilhar = "dezeseis mil";
+                            break;
+                        case 17:
+                            nomeDezenaMilhar = "dezessete mil";
+                            break;
+                        case 18:
+                            nomeDezenaMilhar = "dezoito mil";
+                            break;
+                        case 19:
+                            nomeDezenaMilhar = "dezenove mil";
+                    }
+                    break;
+                case 2:
+                    nomeDezenaMilhar = "vinte";
+                    break;
+                case 3:
+                    nomeDezenaMilhar = "trinta";
+                    break;
+                case 4:
+                    nomeDezenaMilhar = "quarenta";
+                    break;
+                case 5:
+                    nomeDezenaMilhar = "cinquenta";
+                    break;
+                case 6:
+                    nomeDezenaMilhar = "sessenta";
+                    break;
+                case 7:
+                    nomeDezenaMilhar = "setenta";
+                    break;
+                case 8:
+                    nomeDezenaMilhar = "oitenta";
+                    break;
+                case 9:
+                    nomeDezenaMilhar = "noventa";
+            }
+        }
 
         return nomeDezenaMilhar;
     }
