@@ -157,87 +157,87 @@ public class Cheque {
                 case 1:
                     switch (dezenaMilharUni) {
                         case 0:
-                            nomeDezenaMilhar = "e dez mil";
+                            nomeDezenaMilhar = " e dez mil";
                             break;
                         case 1:
-                            nomeDezenaMilhar = "e onze mil";
+                            nomeDezenaMilhar = " e onze mil";
                             break;
                         case 2:
-                            nomeDezenaMilhar = "e doze mil";
+                            nomeDezenaMilhar = " e doze mil";
                             break;
                         case 3:
-                            nomeDezenaMilhar = "e treze mil";
+                            nomeDezenaMilhar = " e treze mil";
                             break;
                         case 4:
-                            nomeDezenaMilhar = "e quartorze mil";
+                            nomeDezenaMilhar = " e quartorze mil";
                             break;
                         case 5:
-                            nomeDezenaMilhar = "e quinze mil";
+                            nomeDezenaMilhar = " e quinze mil";
                             break;
                         case 6:
-                            nomeDezenaMilhar = "e dezeseis mil";
+                            nomeDezenaMilhar = " e dezeseis mil";
                             break;
                         case 7:
-                            nomeDezenaMilhar = "e dezessete mil";
+                            nomeDezenaMilhar = " e dezessete mil";
                             break;
                         case 8:
-                            nomeDezenaMilhar = "e dezoito mil";
+                            nomeDezenaMilhar = " e dezoito mil";
                             break;
                         case 9:
-                            nomeDezenaMilhar = "e dezenove mil";
+                            nomeDezenaMilhar = " e dezenove mil";
                     }
                     break;
                 case 2:
-                    nomeDezenaMilhar = "e vinte";
+                    nomeDezenaMilhar = " e vinte";
                     break;
                 case 3:
-                    nomeDezenaMilhar = "e trinta";
+                    nomeDezenaMilhar = " e trinta";
                     break;
                 case 4:
-                    nomeDezenaMilhar = "e quarenta";
+                    nomeDezenaMilhar = " e quarenta";
                     break;
                 case 5:
-                    nomeDezenaMilhar = "e cinquenta";
+                    nomeDezenaMilhar = " e cinquenta";
                     break;
                 case 6:
-                    nomeDezenaMilhar = "e sessenta";
+                    nomeDezenaMilhar = " e sessenta";
                     break;
                 case 7:
-                    nomeDezenaMilhar = "e setenta";
+                    nomeDezenaMilhar = " e setenta";
                     break;
                 case 8:
-                    nomeDezenaMilhar = "e oitenta";
+                    nomeDezenaMilhar = " e oitenta";
                     break;
                 case 9:
-                    nomeDezenaMilhar = "e noventa";
+                    nomeDezenaMilhar = " e noventa";
             }
         }
 
         if (resto == 0 && valor > 100000) {
             switch (dezenaMilhar) {
                 case 2:
-                    nomeDezenaMilhar = "e vinte mil";
+                    nomeDezenaMilhar = " e vinte mil";
                     break;
                 case 3:
-                    nomeDezenaMilhar = "e trinta mil";
+                    nomeDezenaMilhar = " e trinta mil";
                     break;
                 case 4:
-                    nomeDezenaMilhar = "e quarenta mil";
+                    nomeDezenaMilhar = " e quarenta mil";
                     break;
                 case 5:
-                    nomeDezenaMilhar = "e cinquenta mil";
+                    nomeDezenaMilhar = " e cinquenta mil";
                     break;
                 case 6:
-                    nomeDezenaMilhar = "e sessenta mil";
+                    nomeDezenaMilhar = " e sessenta mil";
                     break;
                 case 7:
-                    nomeDezenaMilhar = "e setenta mil";
+                    nomeDezenaMilhar = " e setenta mil";
                     break;
                 case 8:
-                    nomeDezenaMilhar = "e oitenta mil";
+                    nomeDezenaMilhar = " e oitenta mil";
                     break;
                 case 9:
-                    nomeDezenaMilhar = "e noventa mil";
+                    nomeDezenaMilhar = " e noventa mil";
             }
         }
 
@@ -403,62 +403,62 @@ public class Cheque {
         if (valor > 20000 && valor < 100000)
             switch (milhar) {
                 case 1:
-                    nomeMilhar = "e um mil";
+                    nomeMilhar = " e um mil";
                     break;
                 case 2:
-                    nomeMilhar = "e dois mil";
+                    nomeMilhar = " e dois mil";
                     break;
                 case 3:
-                    nomeMilhar = "e três mil";
+                    nomeMilhar = " e três mil";
                     break;
                 case 4:
-                    nomeMilhar = "e quatro mil";
+                    nomeMilhar = " e quatro mil";
                     break;
                 case 5:
-                    nomeMilhar = "e cinco mil";
+                    nomeMilhar = " e cinco mil";
                     break;
                 case 6:
-                    nomeMilhar = "e seis mil";
+                    nomeMilhar = " e seis mil";
                     break;
                 case 7:
-                    nomeMilhar = "e sete mil";
+                    nomeMilhar = " e sete mil";
                     break;
                 case 8:
-                    nomeMilhar = "e oito mil";
+                    nomeMilhar = " e oito mil";
                     break;
                 case 9:
-                    nomeMilhar = "e nove mil";
+                    nomeMilhar = " e nove mil";
                     break;
             }
 
         if (valor > 100000 && valor < 110000 || valor > 120000) {
             switch (milhar) {
                 case 1:
-                    nomeMilhar = "e um mil";
+                    nomeMilhar = " e um mil";
                     break;
                 case 2:
-                    nomeMilhar = "e dois mil";
+                    nomeMilhar = " e dois mil";
                     break;
                 case 3:
-                    nomeMilhar = "e três mil";
+                    nomeMilhar = " e três mil";
                     break;
                 case 4:
-                    nomeMilhar = "e quatro mil";
+                    nomeMilhar = " e quatro mil";
                     break;
                 case 5:
-                    nomeMilhar = "e cinco mil";
+                    nomeMilhar = " e cinco mil";
                     break;
                 case 6:
-                    nomeMilhar = "e seis mil";
+                    nomeMilhar = " e seis mil";
                     break;
                 case 7:
-                    nomeMilhar = "e sete mil";
+                    nomeMilhar = " e sete mil";
                     break;
                 case 8:
-                    nomeMilhar = "e oito mil";
+                    nomeMilhar = " e oito mil";
                     break;
                 case 9:
-                    nomeMilhar = "e nove mil";
+                    nomeMilhar = " e nove mil";
                     break;
             }
         }
@@ -508,33 +508,33 @@ public class Cheque {
             switch (centena) {
                 case 1:
                     if (valor == 100) {
-                        nomeCentena = "e cem";
+                        nomeCentena = " e cem";
                     } else
-                        nomeCentena = "e cento";
+                        nomeCentena = " e cento";
                     break;
                 case 2:
-                    nomeCentena = "e duzentos";
+                    nomeCentena = " e duzentos";
                     break;
                 case 3:
-                    nomeCentena = "e trezentos";
+                    nomeCentena = " e trezentos";
                     break;
                 case 4:
-                    nomeCentena = "e quatrocentos";
+                    nomeCentena = " e quatrocentos";
                     break;
                 case 5:
-                    nomeCentena = "e quinhentos";
+                    nomeCentena = " e quinhentos";
                     break;
                 case 6:
-                    nomeCentena = "e seiscentos";
+                    nomeCentena = " e seiscentos";
                     break;
                 case 7:
-                    nomeCentena = "e setecentos";
+                    nomeCentena = " e setecentos";
                     break;
                 case 8:
-                    nomeCentena = "e oitocentos";
+                    nomeCentena = " e oitocentos";
                     break;
                 case 9:
-                    nomeCentena = "e novecentos";
+                    nomeCentena = " e novecentos";
                     break;
             }
 
@@ -578,7 +578,7 @@ public class Cheque {
                             nomeDaDezena = "dezoito";
                             break;
                         case 9:
-                            nomeDaDezena = "dezenove";
+                            nomeDaDezena = "dezenove ";
                     }
                     break;
                 case 2:
@@ -612,59 +612,59 @@ public class Cheque {
                 case 1:
                     switch (dezenaUnidade) {
                         case 0:
-                            nomeDaDezena = "e dez";
+                            nomeDaDezena = " e dez";
                             break;
                         case 1:
-                            nomeDaDezena = "e onze";
+                            nomeDaDezena = " e onze";
                             break;
                         case 2:
-                            nomeDaDezena = "e doze";
+                            nomeDaDezena = " e doze";
                             break;
                         case 3:
-                            nomeDaDezena = "e treze";
+                            nomeDaDezena = " e treze";
                             break;
                         case 4:
-                            nomeDaDezena = "e quatorze";
+                            nomeDaDezena = " e quatorze";
                             break;
                         case 5:
-                            nomeDaDezena = "e quinze";
+                            nomeDaDezena = " e quinze";
                             break;
                         case 6:
-                            nomeDaDezena = "e dezesseis";
+                            nomeDaDezena = " e dezesseis";
                             break;
                         case 7:
-                            nomeDaDezena = "e dezessete";
+                            nomeDaDezena = " e dezessete";
                             break;
                         case 8:
-                            nomeDaDezena = "e dezoito";
+                            nomeDaDezena = " e dezoito";
                             break;
                         case 9:
-                            nomeDaDezena = "e dezenove";
+                            nomeDaDezena = " e dezenove";
                     }
                     break;
                 case 2:
-                    nomeDaDezena = "e vinte";
+                    nomeDaDezena = " e vinte";
                     break;
                 case 3:
-                    nomeDaDezena = "e trinta";
+                    nomeDaDezena = " e trinta";
                     break;
                 case 4:
-                    nomeDaDezena = "e quarenta";
+                    nomeDaDezena = " e quarenta";
                     break;
                 case 5:
-                    nomeDaDezena = "e cinquenta";
+                    nomeDaDezena = " e cinquenta";
                     break;
                 case 6:
-                    nomeDaDezena = "e sessenta";
+                    nomeDaDezena = " e sessenta";
                     break;
                 case 7:
-                    nomeDaDezena = "e setenta";
+                    nomeDaDezena = " e setenta";
                     break;
                 case 8:
-                    nomeDaDezena = "e oitenta";
+                    nomeDaDezena = " e oitenta";
                     break;
                 case 9:
-                    nomeDaDezena = "e noventa";
+                    nomeDaDezena = " e noventa";
             }
 
         return nomeDaDezena;
@@ -715,32 +715,33 @@ public class Cheque {
                 unidade = unidade % 10;
             switch (unidade) {
                 case 1:
-                    nomeUnidade = "e um";
+                    nomeUnidade = " e um";
                     break;
                 case 2:
-                    nomeUnidade = "e dois";
+                    nomeUnidade = " e dois";
                     break;
                 case 3:
-                    nomeUnidade = "e três";
+                    nomeUnidade = " e três";
                     break;
                 case 4:
-                    nomeUnidade = "e quatro";
+                    nomeUnidade = " e quatro";
                     break;
                 case 5:
-                    nomeUnidade = "e cinco";
+                    nomeUnidade = " e cinco";
                     break;
                 case 6:
-                    nomeUnidade = "e seis";
+                    nomeUnidade = " e seis";
                     break;
                 case 7:
-                    nomeUnidade = "e sete";
+                    nomeUnidade = " e sete";
                     break;
                 case 8:
-                    nomeUnidade = "e oito";
+                    nomeUnidade = " e oito";
                     break;
                 case 9:
-                    nomeUnidade = "e nove";
+                    nomeUnidade = " e nove";
                     break;
+
             }
         }
 
@@ -751,19 +752,20 @@ public class Cheque {
         String nomePorExteso = "";
         String singularPlural = "um";
 
+
         if (valor <= 0 || valor > 1000000)
             return nomePorExteso = "";
 
         if (singularPlural.equals(getValorEntre1E09()))
-            singularPlural = "real";
+            singularPlural = " real";
         else
-            singularPlural = "reais";
+            singularPlural = " reais";
 
-        nomePorExteso = String.format("%s %s %s %s %s %s %s", getValorEntre100000E900000()
+        nomePorExteso = String.format("%s%s%s%s%s%s%s", getValorEntre100000E900000()
                 , getValorEntre10000E90000(), getValorEntre1000E9000(), getValorEntre100E900()
                 , getValorEntre10E90(), getValorEntre1E09(), singularPlural);
 
-        return nomePorExteso.trim().toLowerCase(Locale.ROOT);
+        return nomePorExteso.trim();
     }
 }
 

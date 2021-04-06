@@ -41,6 +41,5 @@ class ContaDeAgua {
             return 7 + 20 + (2 * (consumo - 30));
 
         return 7 + 20 + 140 + (5 * (consumo - 100));
-
     }
 }
