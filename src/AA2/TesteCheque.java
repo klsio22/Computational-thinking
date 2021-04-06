@@ -196,7 +196,7 @@ class TesteCheque {
     public void teste101000()
     {
         cheque.setValor(101000);
-        assertEquals("cento e um reais",
+        assertEquals("cento e um mil reais",
                 cheque.getValorPorExtenso());
     }
 

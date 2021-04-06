@@ -811,7 +811,6 @@ public class Cheque {
                 case 9:
                     nomeUnidade = " e nove";
                     break;
-
             }
         }
 
