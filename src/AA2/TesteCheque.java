@@ -87,5 +87,61 @@ class TesteCheque {
                 cheque.getValorPorExtenso());
     }
 
+    @Test
+    public void teste51009()
+    {
+        cheque.setValor(51009);
+        assertEquals("cinquenta e um mil e nove reais",
+                cheque.getValorPorExtenso());
+    }
+
+    @Test
+    public void teste510009()
+    {
+        cheque.setValor(510009);
+        assertEquals("quinhentos e dez mil e nove reais",
+                cheque.getValorPorExtenso());
+    }
+
+    @Test
+    public void teste121000()
+    {
+        cheque.setValor(121000);
+        assertEquals("cento e vinte e um mil reais",
+                cheque.getValorPorExtenso());
+    }
+
+
+    @Test
+    public void teste300000()
+    {
+        cheque.setValor(300000);
+        assertEquals("trezentos mil reais",
+                cheque.getValorPorExtenso());
+    }
+
+    @Test
+    public void teste301009()
+    {
+        cheque.setValor(301009);
+        assertEquals("trezentos e um mil e nove reais",
+                cheque.getValorPorExtenso());
+    }
+    @Test
+    public void teste19009()
+    {
+        cheque.setValor(19009);
+        assertEquals("dezenove mil e nove reais",
+                cheque.getValorPorExtenso());
+    }
+
+    @Test
+    public void teste91009()
+    {
+        cheque.setValor(91009);
+        assertEquals("noventa e um mil e nove reais",
+                cheque.getValorPorExtenso());
+    }
+
 }
 
