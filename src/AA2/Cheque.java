@@ -819,7 +819,7 @@ public class Cheque {
     }
 
     public String getValorPorExtenso() {
-        String nomePorExteso = "";
+        String nomePorExteso;
         String singularPlural = "um";
 
 

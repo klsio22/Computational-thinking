@@ -143,5 +143,30 @@ class TesteCheque {
                 cheque.getValorPorExtenso());
     }
 
+    @Test
+    public void testeMenos2159()
+    {
+        cheque.setValor(-2159);
+        assertEquals("",
+                cheque.getValorPorExtenso());
+    }
+
+    @Test
+    public void teste0()
+    {
+        cheque.setValor(0);
+        assertEquals("",
+                cheque.getValorPorExtenso());
+    }
+
+    @Test
+    public void teste11010()
+    {
+        cheque.setValor(11010);
+        assertEquals("onze mil e dez reais",
+                cheque.getValorPorExtenso());
+    }
+
+
 }
 
