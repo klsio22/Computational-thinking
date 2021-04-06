@@ -20,34 +20,34 @@ public class Cheque {
         if (resto == 0){
 
             switch (centenaMilhar) {
-            case 1:
-                nomecentenaMilhar = "cem mil";
-                break;
-            case 2:
-                nomecentenaMilhar = "dozentos mil";
-                break;
-            case 3:
-                nomecentenaMilhar = "trezentos mil";
-                break;
-            case 4:
-                nomecentenaMilhar = "quadrocentos mil";
-                break;
-            case 5:
-                nomecentenaMilhar = "quinhetos mil";
-                break;
-            case 6:
-                nomecentenaMilhar = "seiscentos mil";
-                break;
-            case 7:
-                nomecentenaMilhar = "setecentos mil";
-                break;
-            case 8:
-                nomecentenaMilhar = "oitocentos mil";
-                break;
-            case 9:
-                nomecentenaMilhar = "novecentos mil";
-                break;
-        }
+                case 1:
+                    nomecentenaMilhar = "cem mil";
+                    break;
+                case 2:
+                    nomecentenaMilhar = "duzentos mil";
+                    break;
+                case 3:
+                    nomecentenaMilhar = "trezentos mil";
+                    break;
+                case 4:
+                    nomecentenaMilhar = "quatrocentos mil";
+                    break;
+                case 5:
+                    nomecentenaMilhar = "quinhentos mil";
+                    break;
+                case 6:
+                    nomecentenaMilhar = "seiscentos mil";
+                    break;
+                case 7:
+                    nomecentenaMilhar = "setecentos mil";
+                    break;
+                case 8:
+                    nomecentenaMilhar = "oitocentos mil";
+                    break;
+                case 9:
+                    nomecentenaMilhar = "novecentos mil";
+                    break;
+            }
         }
 
         if (menosResto < 1000)
@@ -56,13 +56,13 @@ public class Cheque {
                     nomecentenaMilhar = "cento mil";
                     break;
                 case 2:
-                    nomecentenaMilhar = "dozentos mil";
+                    nomecentenaMilhar = "duzentos mil";
                     break;
                 case 3:
                     nomecentenaMilhar = "trezentos mil";
                     break;
                 case 4:
-                    nomecentenaMilhar = "quadrocentos mil";
+                    nomecentenaMilhar = "quatrocentos mil";
                     break;
                 case 5:
                     nomecentenaMilhar = "quinhentos mil";
@@ -87,13 +87,13 @@ public class Cheque {
                     nomecentenaMilhar = "cento";
                     break;
                 case 2:
-                    nomecentenaMilhar = "dozentos";
+                    nomecentenaMilhar = "duzentos";
                     break;
                 case 3:
                     nomecentenaMilhar = "trezentos";
                     break;
                 case 4:
-                    nomecentenaMilhar = "quadrocentos";
+                    nomecentenaMilhar = "quatrocentos";
                     break;
                 case 5:
                     nomecentenaMilhar = "quinhentos";
@@ -142,13 +142,13 @@ public class Cheque {
                             nomeDezenaMilhar = "treze mil";
                             break;
                         case 4:
-                            nomeDezenaMilhar = "quartorze mil";
+                            nomeDezenaMilhar = "quatorze mil";
                             break;
                         case 5:
                             nomeDezenaMilhar = "quinze mil";
                             break;
                         case 6:
-                            nomeDezenaMilhar = "dezeseis mil";
+                            nomeDezenaMilhar = "dezesseis mil";
                             break;
                         case 7:
                             nomeDezenaMilhar = "dezessete mil";
@@ -205,13 +205,13 @@ public class Cheque {
                             nomeDezenaMilhar = " e treze mil";
                             break;
                         case 4:
-                            nomeDezenaMilhar = " e quartorze mil";
+                            nomeDezenaMilhar = " e quatorze mil";
                             break;
                         case 5:
                             nomeDezenaMilhar = " e quinze mil";
                             break;
                         case 6:
-                            nomeDezenaMilhar = " e dezeseis mil";
+                            nomeDezenaMilhar = " e dezesseis mil";
                             break;
                         case 7:
                             nomeDezenaMilhar = " e dezessete mil";
@@ -267,13 +267,13 @@ public class Cheque {
                             nomeDezenaMilhar = " e treze mil";
                             break;
                         case 4:
-                            nomeDezenaMilhar = " e quartorze mil";
+                            nomeDezenaMilhar = " e quatorze mil";
                             break;
                         case 5:
                             nomeDezenaMilhar = " e quinze mil";
                             break;
                         case 6:
-                            nomeDezenaMilhar = " e dezeseis mil";
+                            nomeDezenaMilhar = " e dezesseis mil";
                             break;
                         case 7:
                             nomeDezenaMilhar = " e dezessete mil";
@@ -328,13 +328,13 @@ public class Cheque {
                             nomeDezenaMilhar = "treze mil";
                             break;
                         case 14:
-                            nomeDezenaMilhar = "quartorze mil";
+                            nomeDezenaMilhar = "quatorze mil";
                             break;
                         case 15:
                             nomeDezenaMilhar = "quinze mil";
                             break;
                         case 16:
-                            nomeDezenaMilhar = "dezeseis mil";
+                            nomeDezenaMilhar = "dezesseis mil";
                             break;
                         case 17:
                             nomeDezenaMilhar = "dezessete mil";
@@ -388,13 +388,13 @@ public class Cheque {
                             nomeDezenaMilhar = "treze mil";
                             break;
                         case 14:
-                            nomeDezenaMilhar = "quartorze mil";
+                            nomeDezenaMilhar = "quatorze mil";
                             break;
                         case 15:
                             nomeDezenaMilhar = "quinze mil";
                             break;
                         case 16:
-                            nomeDezenaMilhar = "dezeseis mil";
+                            nomeDezenaMilhar = "dezesseis mil";
                             break;
                         case 17:
                             nomeDezenaMilhar = "dezessete mil";
@@ -820,20 +820,20 @@ public class Cheque {
 
     public String getValorPorExtenso() {
         String nomePorExteso;
-        String singularPlural = "um";
-
+        String real = "";
+        String um = "um";
 
         if (valor <= 0 || valor > 1000000)
             return nomePorExteso = "";
 
-        if (singularPlural.equals(getValorEntre1E09()))
-            singularPlural = " real";
+        if (um.equals(getValorEntre1E09()))
+            real = " real";
         else
-            singularPlural = " reais";
+            real = " reais";
 
         nomePorExteso = String.format("%s%s%s%s%s%s%s", getValorEntre100000E900000()
                 , getValorEntre10000E90000(), getValorEntre1000E9000(), getValorEntre100E900()
-                , getValorEntre10E90(), getValorEntre1E09(), singularPlural);
+                , getValorEntre10E90(), getValorEntre1E09(), real);
 
         return nomePorExteso.trim().toLowerCase(Locale.ROOT);
     }
