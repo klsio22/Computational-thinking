@@ -200,5 +200,21 @@ class TesteCheque {
                 cheque.getValorPorExtenso());
     }
 
+    @Test
+    public void teste101001()
+    {
+        cheque.setValor(101001);
+        assertEquals("cento e um mil e um reais",
+                cheque.getValorPorExtenso());
+    }
+
+    @Test
+    public void teste2009()
+    {
+        cheque.setValor(2009);
+        assertEquals("dois mil e nove reais",
+                cheque.getValorPorExtenso());
+    }
+
 }
 
