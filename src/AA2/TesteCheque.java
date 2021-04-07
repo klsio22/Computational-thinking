@@ -1,5 +1,5 @@
 package AA2;
-
+//Klesio Antonio do Nascimento
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
@@ -213,6 +213,31 @@ class TesteCheque {
     {
         cheque.setValor(2009);
         assertEquals("dois mil e nove reais",
+                cheque.getValorPorExtenso());
+    }
+
+
+    @Test
+    public void teste116009()
+    {
+        cheque.setValor(116009);
+        assertEquals("cento e dezesseis mil e nove reais",
+                cheque.getValorPorExtenso());
+    }
+
+    @Test
+    public void teste116099()
+    {
+        cheque.setValor(116099);
+        assertEquals("cento e dezesseis mil e noventa e nove reais",
+                cheque.getValorPorExtenso());
+    }
+
+    @Test
+    public void teste116999()
+    {
+        cheque.setValor(116999);
+        assertEquals("cento e dezesseis mil e novecentos e noventa e nove reais",
                 cheque.getValorPorExtenso());
     }
 

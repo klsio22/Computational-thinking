@@ -188,7 +188,7 @@ public class Cheque {
 
         if (resto != 0 && valor > 100000) {
 
-            dezenaMilharUni = valor / 1000 % 100;
+            dezenaMilharUni = valor / 1000 % 10 % 10;
             switch (dezenaMilhar) {
                 case 1:
                     switch (dezenaMilharUni) {
