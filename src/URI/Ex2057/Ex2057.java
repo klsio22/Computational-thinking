@@ -19,29 +19,29 @@ class InterfaceTexto {
     }
 
     public void EntradaDados() {
-        int S = entrada.nextInt();
-        int T = entrada.nextInt();
-        int F = entrada.nextInt();
-        FusoHorario fuso = new FusoHorario(S, T, F);
-        System.out.printf("%d\n", fuso.getFusoHorario());
+        int saida = entrada.nextInt();
+        int tempo = entrada.nextInt();
+        int fusoHorario = entrada.nextInt();
+        FusoHorario fuso = new FusoHorario(saida, tempo, fusoHorario);
+        System.out.printf("%d\n", fuso.getDestino());
     }
 }
 
 class FusoHorario {
-    private final int S;
-    private final int T;
-    private final int F;
+    private final int saida;
+    private final int tempo;
+    private final int fusoHorario;
 
-    public FusoHorario(int S, int T, int F){
-        this.S = S;
-        this.F = F;
-        this.T = T;
+    public FusoHorario(int saida, int tempo, int fusoHorario) {
+        this.saida = saida;
+        this.fusoHorario = fusoHorario;
+        this.tempo = tempo;
     }
 
-    public int getFusoHorario() {
+    public int getDestino() {
         int soma;
 
-        soma = S + T + F;
+        soma = saida + tempo + fusoHorario;
 
         if (soma == 24)
             return 0;

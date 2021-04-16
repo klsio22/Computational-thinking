@@ -12,16 +12,27 @@ public class BaseIOO {
 
 class InterfaceTexto {
     private final Scanner entrada;
+    private NomeDoExercicioObjeto nomeDaIntacia;
 
     public InterfaceTexto() {
         entrada = new Scanner(System.in);
+        nomeDaIntacia = new NomeDoExercicioObjeto();
     }
 
     public void EntradaDados() {
-
+        nomeDaIntacia.setX(entrada.nextInt());
+        System.out.println(nomeDaIntacia.getRetornarString());
     }
 }
 
 class NomeDoExercicioObjeto {
+    private int x;
 
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public String getRetornarString(){
+        return"";
+    }
 }
