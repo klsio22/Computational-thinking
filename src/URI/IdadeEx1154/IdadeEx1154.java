@@ -1,10 +1,12 @@
 package URI.IdadeEx1154;
-
+//KLESIO ANTONIO DO NASCIMENTO
 import java.io.IOException;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class IdadeEx1154 {
     public static void main(String[] args) throws IOException {
+        Locale.setDefault(Locale.US);
         InterfaceTexto obj = new InterfaceTexto();
         obj.entradaDados();
     }
@@ -24,7 +26,7 @@ class InterfaceTexto {
         while (idade.getIdade() >= 0)
             idade.setIdade(entrada.nextInt());
 
-        System.out.println(idade.getMedia());
+        System.out.printf("%.2f\n",idade.getMedia());
     }
 }
 
