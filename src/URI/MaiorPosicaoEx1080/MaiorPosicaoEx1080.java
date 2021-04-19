@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class MaiorPosicaoEx1080 {
     public static void main(String[] args) throws IOException {
         InterfaceTexto obj = new InterfaceTexto();
-        obj.EntradaDados();
+        obj.entradaDados();
     }
 }
 
@@ -20,7 +20,7 @@ class InterfaceTexto {
         maior = new MaiorValorESuaPosicao();
     }
 
-    public void EntradaDados() {
+    public void entradaDados() {
         for (int i = 1; i < 101; i++) {
             maior.setValor(entrada.nextInt());
             maior.setAuxiliar(i);
@@ -39,7 +39,7 @@ class MaiorValorESuaPosicao {
     }
 
     public void setValor(int valor) {
-        while (valor > maiorValor) {
+        if (valor > maiorValor) {
             maiorValor = valor;
             posicao = auxiliar + 1;
         }

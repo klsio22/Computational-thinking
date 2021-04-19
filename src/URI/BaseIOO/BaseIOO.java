@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class BaseIOO {
     public static void main(String[] args) throws IOException {
         InterfaceTexto obj = new InterfaceTexto();
-        obj.EntradaDados();
+        obj.entradaDados();
     }
 }
 
@@ -19,7 +19,7 @@ class InterfaceTexto {
         nomeDaIntacia = new NomeDoExercicioObjeto();
     }
 
-    public void EntradaDados() {
+    public void entradaDados() {
         nomeDaIntacia.setX(entrada.nextInt());
         System.out.println(nomeDaIntacia.getRetornarString());
     }

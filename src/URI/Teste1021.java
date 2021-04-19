@@ -2,7 +2,7 @@ package URI;
 import java.io.IOException;
 import java.util.Locale;
 import java.util.Scanner;
-public class teste1021 {
+public class Teste1021 {
 
     public static void main(String[] args) throws IOException {
         Locale.setDefault(Locale.US);

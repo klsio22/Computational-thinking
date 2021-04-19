@@ -8,7 +8,7 @@ public class TabuadaEx1078 {
 
     public static void main(String[] args) throws IOException {
         InterfaceTexto obj = new InterfaceTexto();
-        obj.EntradaDados();
+        obj.entradaDados();
     }
 
 }
@@ -23,7 +23,7 @@ class InterfaceTexto {
         numero = new FormarTabuada();
     }
 
-    public void EntradaDados() {
+    public void entradaDados() {
         numero.setNumero(entrada.nextInt());
         System.out.print(numero.getTabuada());
     }
