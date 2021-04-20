@@ -31,7 +31,7 @@ class InterfeceTexto {
 
                 System.out.print(primo.getPrimo());
 
-                if (primo.getNumeroNaoPrimo())
+                if (primo.getNumeroPrimo())
                     System.out.println(" eh primo");
                 else
                     System.out.println(" nao eh primo");
@@ -52,7 +52,7 @@ class NumeroPrimoOuNao {
         return primo;
     }
 
-    public boolean getNumeroNaoPrimo() {
+    public boolean getNumeroPrimo() {
         for (int j = 2; j <= primo / 2; j++)
             if (primo % j == 0)
                 return false;
