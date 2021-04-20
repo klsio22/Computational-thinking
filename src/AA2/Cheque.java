@@ -837,5 +837,3 @@ public class Cheque {
         return nomePorExteso.trim().toLowerCase(Locale.ROOT);
     }
 }
-
-    

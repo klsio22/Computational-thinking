@@ -11,7 +11,7 @@ public class BaseIOO {
 }
 
 class InterfaceTexto {
-    private final Scanner entrada;
+    private Scanner entrada;
     private NomeDoExercicioObjeto nomeDaIntacia;
 
     public InterfaceTexto() {

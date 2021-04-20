@@ -1,5 +1,6 @@
 package URI.IdadeEx1154;
 //KLESIO ANTONIO DO NASCIMENTO
+
 import java.io.IOException;
 import java.util.Locale;
 import java.util.Scanner;
@@ -13,7 +14,7 @@ public class IdadeEx1154 {
 }
 
 class InterfaceTexto {
-    private final Scanner entrada;
+    private Scanner entrada;
     private MediaDaIdade idade;
 
     public InterfaceTexto() {
@@ -26,25 +27,23 @@ class InterfaceTexto {
         while (idade.getIdade() >= 0)
             idade.setIdade(entrada.nextInt());
 
-        System.out.printf("%.2f\n",idade.getMedia());
+        System.out.printf("%.2f\n", idade.getMediaIdade());
     }
 }
 
 class MediaDaIdade {
     private int idade, soma, cont;
-    private double media;
 
     public void setIdade(int idade) {
         if (idade >= 0) {
             soma += idade;
             cont++;
         }
-        media = (double) soma / cont;
         this.idade = idade;
     }
 
-    public double getMedia() {
-        return media;
+    public double getMediaIdade() {
+        return (double) soma / cont;
     }
 
     public int getIdade() {
