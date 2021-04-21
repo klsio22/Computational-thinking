@@ -1,42 +1,43 @@
 package URI.Experiencia1094;
 //KLESIO ANTONIO DO NASCIMENTO
+
 import java.io.IOException;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Experiencia1094 {
     public static void main(String[] args) throws IOException {
+        Locale.setDefault(Locale.US);
         InterfaceTexto obj = new InterfaceTexto();
-        obj.EntradaDados();
+        obj.entradaDados();
     }
 }
 
 class InterfaceTexto {
     private final Scanner entrada;
-    private Esperimento cobaias;
+    private Experimento cobaias;
 
     public InterfaceTexto() {
         entrada = new Scanner(System.in);
-        cobaias = new Esperimento();
+        cobaias = new Experimento();
     }
 
-    public void EntradaDados() {
+    public void entradaDados() {
         int exprimentos;
         exprimentos = entrada.nextInt();
 
-        if (exprimentos >= 1 && exprimentos <= 15) {
-            for (int i = 0; i < exprimentos; i++) {
-                cobaias.setAnimais(entrada.nextInt(), entrada.next().charAt(0));
-            }
+        for (int i = 0; i < exprimentos; i++) {
+            cobaias.setAnimais(entrada.nextInt(), entrada.next().charAt(0));
         }
 
         System.out.printf("Total: %d cobaias\n",
                 cobaias.getTotalAnimais());
         System.out.printf("Total de coelhos: %d\n",
-                cobaias.getQuantidadeCoelhos());
+                cobaias.getCoelhos());
         System.out.printf("Total de ratos: %d\n",
-                cobaias.getQuantidadeRatos());
+                cobaias.getRatos());
         System.out.printf("Total de sapos: %d\n",
-                cobaias.getQuantidadeSapos());
+                cobaias.getSapos());
 
         System.out.printf("Percentual de coelhos: %.2f %%\n",
                 cobaias.getPorCentCoelhos());
@@ -50,23 +51,25 @@ class InterfaceTexto {
     }
 }
 
-class Esperimento {
+class Experimento {
     private int total;
-    private int quantidadeCoelhos, quantidadeRatos, quantidadeSapos;
+    private int coelhos, ratos, sapos;
     private double PorCentCoelhos, PorcentRatos, PorcentSapos;
 
     public void setAnimais(int quantia, char tipoCobai) {
-        total += quantia;
-        if (tipoCobai == 'C')
-            quantidadeCoelhos += quantia;
-        if (tipoCobai == 'R')
-            quantidadeRatos += quantia;
-        if (tipoCobai == 'S')
-            quantidadeSapos += quantia;
+        if (quantia >= 1 && quantia <= 15) {
+            total += quantia;
+            if (tipoCobai == 'C')
+                coelhos += quantia;
+            if (tipoCobai == 'R')
+                ratos += quantia;
+            if (tipoCobai == 'S')
+                sapos += quantia;
 
-        PorCentCoelhos = (double) (quantidadeCoelhos * 100) / total;
-        PorcentRatos = (double) (quantidadeRatos * 100) / total;
-        PorcentSapos = (double) (quantidadeSapos * 100) / total;
+            PorCentCoelhos = (double) (coelhos * 100) / total;
+            PorcentRatos = (double) (ratos * 100) / total;
+            PorcentSapos = (double) (sapos * 100) / total;
+        }
     }
 
     public double getPorCentCoelhos() {
@@ -85,15 +88,15 @@ class Esperimento {
         return total;
     }
 
-    public int getQuantidadeRatos() {
-        return quantidadeRatos;
+    public int getRatos() {
+        return ratos;
     }
 
-    public int getQuantidadeSapos() {
-        return quantidadeSapos;
+    public int getSapos() {
+        return sapos;
     }
 
-    public int getQuantidadeCoelhos() {
-        return quantidadeCoelhos;
+    public int getCoelhos() {
+        return coelhos;
     }
 }
