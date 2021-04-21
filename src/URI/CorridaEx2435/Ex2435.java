@@ -1,4 +1,4 @@
-package URI.Ex2435;
+package URI.CorridaEx2435;
 //KLESIO ANTONIO DO NASCIMENTO
 
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Ex2435 {
     public static void main(String[] args) throws IOException {
         InterfaceTexto obj = new InterfaceTexto();
-        obj.EntradaDados();
+        obj.entradaDados();
     }
 }
 
@@ -20,8 +20,7 @@ class InterfaceTexto {
         charrete = new Corrida();
     }
 
-    public void EntradaDados() {
-
+    public void entradaDados() {
         charrete.setNumCharrete(entrada.nextInt());
         charrete.setDistancia(entrada.nextInt());
         charrete.setVelocidade(entrada.nextInt());

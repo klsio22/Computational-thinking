@@ -26,7 +26,7 @@ class InterfeceTexto {
         NumeroEntradas = entrada.nextInt();
 
         if (NumeroEntradas >= 1 && NumeroEntradas <= 100) {
-            for (int i = 0; i < NumeroEntradas; i++) {
+                for (int i = 0; i < NumeroEntradas; i++) {
                 primo.setPrimo(entrada.nextInt());
 
                 System.out.print(primo.getPrimo());

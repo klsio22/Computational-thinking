@@ -23,9 +23,9 @@ class InterfaceTexto {
     }
 
     public void entradaDados() {
-        idade.setIdade(entrada.nextInt());
-        while (idade.getIdade() >= 0)
+        do {
             idade.setIdade(entrada.nextInt());
+        }while (idade.getIdade() >= 0);
 
         System.out.printf("%.2f\n", idade.getMediaIdade());
     }

@@ -57,8 +57,7 @@ class NumerosPerfeito {
                     divisores += i;
                 }
             }
-            if (divisores == valor)
-                return true;
+            return divisores == valor;
         }
         return false;
     }

@@ -13,40 +13,40 @@ public class MaiorPosicaoEx1080 {
 
 class InterfaceTexto {
     private Scanner entrada;
-    private MaiorValorESuaPosicao maior;
+    private MaiorValor maior;
 
     public InterfaceTexto() {
         entrada = new Scanner(System.in);
-        maior = new MaiorValorESuaPosicao();
+        maior = new MaiorValor();
     }
 
     public void entradaDados() {
-        for (int i = 1; i < 101; i++) {
-            maior.setValor(entrada.nextInt());
+        for (int i = 1; i <= 5; i++) {
             maior.setAuxiliar(i);
+            maior.setValor(entrada.nextInt());
         }
-        System.out.printf("%d\n%d\n", maior.getMaiorValor(), maior.getPosicao());
+        System.out.printf("%d\n%d\n", maior.getValor(), maior.getPosicao());
     }
 
 }
 
-class MaiorValorESuaPosicao {
+class MaiorValor {
 
-    private int maiorValor, posicao, auxiliar;
+    private int valor, posicao, auxiliar;
 
     public void setAuxiliar(int auxiliar) {
         this.auxiliar = auxiliar;
     }
 
     public void setValor(int valor) {
-        if (valor > maiorValor) {
-            maiorValor = valor;
-            posicao = auxiliar + 1;
+        if (valor > this.valor) {
+            this.valor = valor;
+            posicao = auxiliar;
         }
     }
 
-    public int getMaiorValor() {
-        return maiorValor;
+    public int getValor() {
+        return valor;
     }
 
     public int getPosicao() {
