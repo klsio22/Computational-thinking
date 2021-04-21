@@ -14,8 +14,8 @@ public class ex1045 {
 }
 
 class InterfaceTexto2 {
-    private  Scanner entrada;
-    private  TiposDeTriangulos triangulos;
+    private final Scanner entrada;
+    private final TiposDeTriangulos triangulos;
 
     public InterfaceTexto2() {
         entrada = new Scanner(System.in);

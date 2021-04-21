@@ -1,8 +1,7 @@
 package URI.IdadeEx1154;
 //KLESIO ANTONIO DO NASCIMENTO
-
-import java.io.IOException;
 import java.util.Locale;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class IdadeEx1154 {
@@ -14,8 +13,8 @@ public class IdadeEx1154 {
 }
 
 class InterfaceTexto {
-    private Scanner entrada;
-    private MediaDaIdade idade;
+    private final Scanner entrada;
+    private final MediaDaIdade idade;
 
     public InterfaceTexto() {
         entrada = new Scanner(System.in);

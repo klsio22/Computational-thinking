@@ -13,8 +13,8 @@ public class NumeroPrimoEx1165 {
 }
 
 class InterfeceTexto {
-    private Scanner entrada;
-    private NumeroPrimoOuNao primo;
+    private final Scanner entrada;
+    private final NumeroPrimoOuNao primo;
 
     public InterfeceTexto() {
         entrada = new Scanner(System.in);
@@ -56,8 +56,6 @@ class NumeroPrimoOuNao {
         for (int j = 2; j <= primo / 2; j++)
             if (primo % j == 0)
                 return false;
-        if (primo == 1)
-            return false;
-        return true;
+        return primo != 1;
     }
 }

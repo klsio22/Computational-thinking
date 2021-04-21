@@ -14,8 +14,8 @@ public class TabuadaEx1078 {
 }
 
 class InterfaceTexto {
-    private Scanner entrada;
-    private FormarTabuada numero;
+    private final Scanner entrada;
+    private final FormarTabuada numero;
 
 
     public InterfaceTexto() {

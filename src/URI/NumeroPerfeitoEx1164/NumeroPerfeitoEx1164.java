@@ -12,8 +12,8 @@ public class NumeroPerfeitoEx1164 {
 }
 
 class InterfeceTexto {
-    private Scanner entrada;
-    private NumerosPerfeito numero;
+    private final Scanner entrada;
+    private final NumerosPerfeito numero;
 
     public InterfeceTexto() {
         entrada = new Scanner(System.in);

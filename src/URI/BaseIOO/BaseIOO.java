@@ -11,21 +11,21 @@ public class BaseIOO {
 }
 
 class InterfaceTexto {
-    private Scanner entrada;
-    private NomeDoExercicioObjeto nomeDaIntacia;
+    private final Scanner entrada;
+    private final NomeDaIntaciaObjeto nomeDaIntaciaClasse;
 
     public InterfaceTexto() {
         entrada = new Scanner(System.in);
-        nomeDaIntacia = new NomeDoExercicioObjeto();
+        nomeDaIntaciaClasse = new NomeDaIntaciaObjeto();
     }
 
     public void entradaDados() {
-        nomeDaIntacia.setX(entrada.nextInt());
-        System.out.println(nomeDaIntacia.getRetornarString());
+        nomeDaIntaciaClasse.setX(entrada.nextInt());
+        System.out.println(nomeDaIntaciaClasse.getRetornarString());
     }
 }
 
-class NomeDoExercicioObjeto {
+class NomeDaIntaciaObjeto {
     private int x;
 
     public void setX(int x) {

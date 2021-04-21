@@ -12,8 +12,8 @@ public class FatorialEx1153 {
 }
 
 class InterfaceTexto {
-    private Scanner entrada;
-    private FatorialDoNumero fatorial;
+    private final Scanner entrada;
+    private final FatorialDoNumero fatorial;
 
     public InterfaceTexto() {
         entrada = new Scanner(System.in);

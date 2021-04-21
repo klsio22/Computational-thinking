@@ -15,7 +15,7 @@ public class Experiencia1094 {
 
 class InterfaceTexto {
     private final Scanner entrada;
-    private Experimento cobaias;
+    private final Experimento cobaias;
 
     public InterfaceTexto() {
         entrada = new Scanner(System.in);

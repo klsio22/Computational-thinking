@@ -12,20 +12,20 @@ public class MaiorPosicaoEx1080 {
 }
 
 class InterfaceTexto {
-    private Scanner entrada;
-    private MaiorValor maior;
+    private final Scanner entrada;
+    private final MaiorValor numero;
 
     public InterfaceTexto() {
         entrada = new Scanner(System.in);
-        maior = new MaiorValor();
+        numero = new MaiorValor();
     }
 
     public void entradaDados() {
-        for (int i = 1; i <= 5; i++) {
-            maior.setAuxiliar(i);
-            maior.setValor(entrada.nextInt());
+        for (int i = 1; i <= 100; i++) {
+            numero.setAuxiliar(i);
+            numero.setValor(entrada.nextInt());
         }
-        System.out.printf("%d\n%d\n", maior.getValor(), maior.getPosicao());
+        System.out.printf("%d\n%d\n", numero.getValor(), numero.getPosicao());
     }
 
 }

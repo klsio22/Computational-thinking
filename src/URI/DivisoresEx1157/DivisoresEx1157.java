@@ -11,8 +11,8 @@ public class DivisoresEx1157 {
 }
 
 class InterfaceTexto {
-    private Scanner entrada;
-    private Divisores divisores;
+    private final Scanner entrada;
+    private final Divisores divisores;
 
     public InterfaceTexto() {
         entrada = new Scanner(System.in);
