@@ -1,10 +1,10 @@
 package AA3;
 
-public class NumeroInteiro {
+class NumeroInteiro {
     private int n;
 
-    public NumeroInteiro(int n) {
-        this.n = n;
+    public NumeroInteiro() {
+        this.setN(n);
     }
 
     public void setN(int n) {
@@ -15,11 +15,19 @@ public class NumeroInteiro {
         return n;
     }
 
-    public int formula() {
+    public int getFormula() {
         int formula = 1;
 
-        for (int i = n; i > 1; i--)
-            formula = formula * i;
+        //for (int i = n; i > 1; i--)
+          //  formula  *= i;
+        int fator = 1;
+        for (int i = 1; i <= n; i++) {
+            fator *= i;
+            if (i > 2)
+                formula *= (-1);
+            formula += (1.0 / fator);
+            // System.out.printf("f(%d) = %f\n", i, formula);
+        }
 
         return formula;
     }
