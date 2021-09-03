@@ -6,18 +6,22 @@ import java.util.Locale;
 public class Cheque {
     private int valor;
 
+    public Cheque(){
+        this.setValor(valor);
+    }
+
     public void setValor(int valor) {
         this.valor = valor;
     }
 
-    public String getValorEntre100000E900000() {
+    private String getValorEntre100000E900000() {
         int resto = valor % 100000 / 10;
         int centenaMilhar = valor / 100000;
         int menosResto = valor % 10000;
 
         String nomecentenaMilhar = "";
 
-        if (resto == 0){
+        if (resto == 0) {
 
             switch (centenaMilhar) {
                 case 1:
@@ -81,7 +85,7 @@ public class Cheque {
                     break;
             }
 
-        if (resto !=0)
+        if (resto != 0)
             switch (centenaMilhar) {
                 case 1:
                     nomecentenaMilhar = "cento";
@@ -112,13 +116,11 @@ public class Cheque {
                     break;
             }
 
-
-
         return nomecentenaMilhar;
 
     }
 
-    public String getValorEntre10000E90000() {
+    private String getValorEntre10000E90000() {
         int resto = valor % 10000 / 10;
         int menosResto = (valor - (valor % 10000)) / 100000;
         int dezenaMilhar = valor / 10000 % 10;
@@ -434,7 +436,7 @@ public class Cheque {
         return nomeDezenaMilhar;
     }
 
-    public String getValorEntre1000E9000() {
+    private String getValorEntre1000E9000() {
         int milhar = valor / 1000 % 10;
 
         String nomeMilhar = "";
@@ -536,7 +538,7 @@ public class Cheque {
         return nomeMilhar;
     }
 
-    public String getValorEntre100E900() {
+    private String getValorEntre100E900() {
         int centena = valor % 1000 / 100;
         String nomeCentena = "";
 
@@ -611,7 +613,7 @@ public class Cheque {
         return nomeCentena;
     }
 
-    public String getValorEntre10E90() {
+    private String getValorEntre10E90() {
         int dezena = valor % 100 / 10;
         int dezenaUnidade = valor % 10;
         String nomeDaDezena = "";
@@ -740,7 +742,7 @@ public class Cheque {
         return nomeDaDezena;
     }
 
-    public String getValorEntre1E09() {
+    private String getValorEntre1E09() {
         int unidade = valor % 100;
 
         String nomeUnidade = "";
@@ -837,5 +839,3 @@ public class Cheque {
         return nomePorExteso.trim().toLowerCase(Locale.ROOT);
     }
 }
-
-    
